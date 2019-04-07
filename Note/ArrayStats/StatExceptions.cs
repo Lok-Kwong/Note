@@ -1,7 +1,8 @@
 ﻿using System;
-
+using Note.Attributes;
 namespace Note.UtilExceptions
 {
+    [Author("Manu Puduvalli")]
     [Serializable()]
     public class InsufficientDataSetException : Exception
     {
@@ -13,6 +14,7 @@ namespace Note.UtilExceptions
             System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
+    [Author("Manu Puduvalli")]
     [Serializable()]
     public class NoModeException : Exception
     {
