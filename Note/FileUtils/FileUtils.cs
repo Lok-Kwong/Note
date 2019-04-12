@@ -38,5 +38,19 @@ namespace Note
             }
             return length;
         }
+
+        /// <summary>
+        /// Returns a pathname to the user's profile folder.
+        /// </summary>
+        /// <returns>A pathname to the user's profile folder</returns>
+        [Beta]
+        public static string GetUserPath() => System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+
+        /// <summary>
+        /// Returns a pathname to the root directory of the System.
+        /// </summary>
+        /// <returns>A pathname to the root directory of the System</returns>
+        [Beta]
+        public static string GetRootPath() => Path.GetPathRoot(System.Environment.SystemDirectory);
     }
 }
