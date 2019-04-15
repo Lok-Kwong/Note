@@ -37,7 +37,7 @@ namespace Note
         /// </code>
         public static T[] Concat <T> (params T[][] arrays) //Passing a variable number of array's as params
         {
-            if (!arrays.All(x => x != null)) throw new ArgumentNullException("One of the params array's were null");
+            if (arrays.All(x => x == null)) throw new ArgumentNullException("One of the params array's were null");
             Contract.EndContractBlock();
 
             var arrTotal = 0;
