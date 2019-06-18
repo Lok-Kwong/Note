@@ -469,7 +469,7 @@ namespace Note
         /// <typeparam name="T">The type of the enumerable</typeparam>
         /// <param name="numbers">The specified enumerable</param>
         /// <param name="selector">The numeral specifier</param>
-        /// <param name="samstat>The sample statistic></param>
+        /// <param name="samstat">The sample statistic></param>
         /// <returns>Returns if the data set is normally distributed for a proportion.</returns>
         public static bool IsNormalProportion<T>(this IEnumerable<T> numbers, Func<T, double> selector, double samstat)
         {
