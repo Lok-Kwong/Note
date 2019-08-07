@@ -442,5 +442,30 @@ namespace Note
             }
             return true;
         }
+                
+        /// <summary>
+        /// Returns the char value at the specified index. An index ranges from 0 to length() - 1. The first char value of the sequence is at index 0, 
+        /// the next at index 1, and so on, as for array indexing. If the char value specified by the index is a surrogate, the surrogate value is returned.
+        /// </summary>
+        /// <param name="str">The string to be used</param>
+        /// <param name="index">The position of the char value</param>
+        /// <returns>The char value at the specified position of this string</returns>
+        public static char charAt(this string str, int index)
+        { 
+            if (str == null || index == null)
+            {
+                throw new NullReferenceException();
+            }
+            if (index < 0 || index > str.Length - 1)
+            {
+                return IndexOutOfRangeException;
+            }
+            if (str.Length == 0)
+            {
+                return string.Empty;
+            }
+            return str[index];
+        }
+        
     }
 }
